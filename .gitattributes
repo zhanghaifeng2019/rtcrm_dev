@@ -1,0 +1,4 @@
+application/config/config.php merge=ours
+application/config/database.php merge=ours
+application/config/email.php merge=ours
+index.php merge=ours

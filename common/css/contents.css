@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+
+/*---------------------------------------------------------*/
+/* main menu */
+/*---------------------------------------------------------*/
+
+.menu .menu-board-wrap {
+	width: 600px;
+	margin: 40px auto 0 auto;
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.menu .menu-board-wrap h2 {
+	padding: 50px 50px 0 50px;
+	font-size: 30px;
+	line-height: 1.2em;
+	border-top: 5px solid #252529;
+}
+
+.menu .menu-board {
+	padding: 30px 50px;
+}
+.menu .menu-board a {
+	display: block;
+	margin: 20px 0;
+	padding: 0.8em 1em;
+	border-radius: 10px;
+	outline: none;
+}
+
+@media screen and (min-width: 1px) and (max-width: 768px) {
+	.menu main {
+		display: -ms-flexbox;/*IE10*/
+		display: -webkit-flex;
+		display: flex;
+	}
+	.menu .menu-board-wrap {
+		width: 100%;
+		margin: 0;
+	}
+	.menu .menu-board-wrap h2 {
+		padding: 20px 20px 0 20px;
+		font-size: 16px;
+		border: none;
+	}
+	.menu .menu-board {padding: 0 20px}
+}
+
+/*---------------------------------------------------------*/
+/* Log in+Reminder/createnewpassword */
+/*---------------------------------------------------------*/
+
+.login main {
+	display: -ms-flexbox;/*IE10*/
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-pack: center;/*IE10*/
+	-webkit-justify-content: center;
+	justify-content: center;
+	-ms-flex-align: center;/*IE10*/
+	-webkit-align-items: center;
+	align-items: center;
+
+	height: auto;
+	padding-bottom: 0;
+}
+
+.flip-board {
+	width: 600px;
+}
+.flip-board > div {
+	background: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	transition: .3s;
+}
+
+.flip-board-back {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 600px;
+	height: 440px;
+	transform: scale(0.9);
+	z-index: -1;
+	opacity: 0;
+}
+
+.flip-board--active .flip-board-back {
+	top: 0;
+	transform: scale(1);
+	z-index: 999;
+	opacity: 1;
+}
+
+.flip-board h2 {
+	padding: 50px 50px 0 50px;
+	font-size: 30px;
+	line-height: 1.2;
+	border-top: 5px solid #252529;
+}
+.flip-board form {padding: 30px 50px}
+
+.flip-board-input {
+	position: relative;
+	margin: 30px 0;
+}
+.flip-board-input span {
+	position: absolute;
+	top: 0.8em;
+	left: .8em;
+	color: #999;
+	line-height: 1;
+	transition: .3s;
+}
+.flip-board-input--focus span {
+	top: -1.2em;
+	left: 0;
+	font-size: 12px;
+	color: #252529
+}
+
+.flip-board-input input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 46px;
+	padding: 0 .8em;
+	background-color: #f9f9f9;
+	border: none;
+	border-bottom: 3px solid #d5d5d5;
+	border-radius: 0;
+	outline: none;
+	transition: .3s;
+}
+.flip-board-input input:focus {border-color: #81c5df}
+.flip-board-input input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px rgba(241, 217, 15, 0.2) inset;
+	border-bottom: 3px solid #f1d90f;
+}
+
+.flip-board-link a {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #1665d8;
+	padding-right: 20px;
+	cursor: pointer;
+}
+.flip-board-link a::after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 2px;
+	margin: auto;
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #1665d8;
+	border-right: 2px solid #1665d8;
+	transform: rotate(45deg);
+}
+.flip-board-link a:hover {color: #279bd7}
+.flip-board-link a:hover::after {border-color: #279bd7}
+
+.flip-submit-set {
+	margin: 40px 0;
+}
+.flip-submit-set:after {content:"";display: table;clear:both;}
+.flip-submit-set input,
+.flip-submit-set button,
+.flip-submit-cancel {
+	-webkit-appearance: none;
+	appearance: none;
+	float: left;
+	display: block;
+	margin-right: 10px;
+	min-width: 120px;
+	padding: 0.8em 2em;
+	border-radius: 5em;
+	outline: none;
+	transition: .3s;
+}
+
+@media screen and (min-width: 1px) and (max-width: 768px) {
+	.flip-board {width: 300px}
+	.flip-board-back {width: 300px; height: 350px;}
+	.flip-board h2 {
+		padding: 20px 20px 0 20px;
+		font-size: 20px;
+	}
+	.flip-board form {padding: 10px 20px}
+	.flip-board-input {margin: 20px 0;}
+	.flip-board-link {font-size: 12px;}
+	.flip-submit-set {margin: 30px 0}
+}
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
